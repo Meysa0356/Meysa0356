@@ -66,3 +66,9 @@ body{
     height: .2rem;
     background: var(--white-color);
 }
+
+#darkMode-icon{
+    font-size: 2.4rem;
+    color: var(--white-color);
+    cursor: pointer;
+}

@@ -6,6 +6,12 @@
     <title>Meysa</title>
   </head>
 
+  <!-- swiper css -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+  />
+
   <!-- box icons -->
   <link
     href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -157,7 +163,7 @@
           </div>
         </div>
 
-        <div class="porfolio-box">
+        <div class="portfolio-box">
           <img src="img/portfolio1.jpg" alt="" />
 
           <div class="portfolio-layer">
@@ -170,7 +176,7 @@
           </div>
         </div>
 
-        <div class="porfolio-box">
+        <div class="portfolio-box">
           <img src="img/portfolio2.jpg" alt="" />
 
           <div class="portfolio-layer">
@@ -183,7 +189,7 @@
           </div>
         </div>
 
-        <div class="porfolio-box">
+        <div class="portfolio-box">
           <img src="img/portfolio3.jpg" alt="" />
 
           <div class="portfolio-layer">
@@ -196,7 +202,7 @@
           </div>
         </div>
 
-        <div class="porfolio-box">
+        <div class="portfolio-box">
           <img src="img/portfolio4.jpg" alt="" />
 
           <div class="portfolio-layer">
@@ -209,7 +215,7 @@
           </div>
         </div>
 
-        <div class="porfolio-box">
+        <div class="portfolio-box">
           <img src="img/portfolio5.jpg" alt="" />
 
           <div class="portfolio-layer">
@@ -222,7 +228,7 @@
           </div>
         </div>
 
-        <div class="porfolio-box">
+        <div class="portfolio-box">
           <img src="img/portfolio6.jpg" alt="" />
 
           <div class="portfolio-layer">
@@ -242,10 +248,10 @@
       <h2 class="heading">Valuable <span>Testimonial</span></h2>
 
       <div class="testimonial-wrapper">
-        <div class="testimonial-box">
-          <div class="testimonial-content">
-            <div class="testimonial-slide">
-              <img src="" alt="" />
+        <div class="testimonial-box mySwiper">
+          <div class="testimonial-content swiper-wrapper">
+            <div class="testimonial-slide swiper-slide">
+              <img src="img/testimonial1.png" alt="" />
               <h3>Jackson Levi</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -258,11 +264,67 @@
                 repellendus corporis cumque!
               </p>
             </div>
+
+            <div class="testimonial-slide swiper-slide">
+              <img src="img/testimonial2.jpeg" alt="" />
+              <h3>Flora Ocean</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Dolorem modi ipsa voluptate ea deleniti velit illo molestiae
+                doloribus tempora hic consequuntur exercitationem rerum aut nam,
+                magni culpa aliquid vero obcaecati recusandae. Atque distinctio
+                obcaecati rerum saepe, odio impedit voluptates dolorem ut
+                repellendus animi alias ratione debitis labore perferendis rem
+                in voluptatum molestiae deserunt id inventore nobis! Ipsa
+                repellendus corporis cumque!
+              </p>
+            </div>
+
+            <div class="testimonial-slide swiper-slide">
+              <img src="img/testimonial3.jpg" alt="" />
+              <h3>Julian Grayson</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Dolorem modi ipsa voluptate ea deleniti velit illo molestiae
+                doloribus tempora hic consequuntur exercitationem rerum aut nam,
+                magni culpa aliquid vero obcaecati recusandae. Atque distinctio
+                obcaecati rerum saepe, odio impedit voluptates dolorem ut
+                repellendus animi alias ratione debitis labore perferendis rem
+                in voluptatum molestiae deserunt id inventore nobis! Ipsa
+                repellendus corporis cumque!
+              </p>
+            </div>
           </div>
+
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+
         </div>
       </div>
     </div>
 
+    <!-- contact section design -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email Address">
+            </div>
+            <div class="input-box">
+              <input type="number" placeholder="Mobile Number">
+              <input type="text" placeholder="Email Subject">
+          </div>
+          <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+          <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- custom js -->
     <script src="js/script.js"></script>
   </body>

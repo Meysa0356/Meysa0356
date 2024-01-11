@@ -52,3 +52,21 @@ var swiper = new Swiper(".mySwiper", {
         prevEl: ".swiper-button-prev",
     },
 });
+
+// dark ligth mode
+let darkModeIcon = document.querySelector('#darkMode-icon');
+
+darkModeIcon.onclick = () => {
+    darkModeIcon.classList.toogle('bx-sun');
+    document.body.classList.toogle('dark-mode');
+}
+
+// scroll reveal
+ScrollReveal({ 
+    reset: true,
+    distance: '80px',
+    duration: 2000,
+    delay: 200
+});
+
+ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });

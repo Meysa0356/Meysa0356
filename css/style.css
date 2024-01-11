@@ -19,6 +19,12 @@
     --shadow-color: rgba(0, 0, 0, .2);
 }
 
+.dark-mode{
+    --bg-color: #0b061f;
+    --text-color: #fdfdfd;
+    --shadow-color: rgba(0, 0, 0, .7);
+}
+
 html{
     font-size: 62.5%;
     overflow-x: hidden;
@@ -765,5 +771,96 @@ span{
         right: 0;
         transform: rotate(90deg) translate(-50%, 50%) scaleY(3);
         border-width: 23.9rem;
+    }
+
+    .about{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .about-content h2{
+        text-align: center;
+    }
+
+    .about-img img{
+        width: 70vw;
+        margin-top: -2rem;
+    }
+
+    .services h2,
+    .portfolio h2{
+        margin-bottom: 3rem;
+    }
+
+    .portfolio .portfolio-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonial-container .testimonial-wrapper{
+        padding: 5rem 0;
+    }
+
+    .testimonial-content .testimonial-slide{
+        padding: 3rem 2rem;
+    }
+
+    .testimonial-box .swiper-button-next,
+    .testimonial-box .swiper-button-prev{
+        display: none;
+    }
+}
+
+@media (max-width: 617px) {
+    .portfolio .portfolio-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px) {
+    html{
+        font-size: 50%;
+    }
+
+    #darkMode-icon{
+        right: 6rem;
+    }
+
+    .home{
+        padding: 0 3% 30rem;
+    }
+
+    .home .profession-box .profession:nth-child(1) {
+        transform: rotate(-90deg) translate(-110px, -220px);
+    }
+
+    .home .profession-box .profession:nth-child(2) {
+        transform: rotate(0deg) translate(5px, -335px);
+    }
+
+    .home .profession-box .profession:nth-child(3){
+        transform: rotate(90deg) translate(-105px, -440px);
+    }
+
+    .home .profession-box .profession:nth-child(4) {
+        transform: rotate(180deg) translate(-210px, -335px);  
+    }
+
+    .contact form .input-box input{
+        width: 100%;
+    }
+}
+
+@media (max-width: 365px) {
+    .about-img img{
+        width: 90vw;
+    }
+
+    .footer{
+        flex-direction: column-reverse;
+    }
+
+    .footer p{
+        text-align: center;
+        margin-top: 2rem;
     }
 }

@@ -3,12 +3,12 @@ let menuIcon = doument.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
 menuIcon.onclick = () => {
-    menuIcon.classList.toogle('bx-x');
-    navbar.classList.toogle('active');
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
 };
 
 // scroll sections active link
-let section = document.querySelectorAll('section');
+let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
 window.onscroll = () => {
@@ -21,7 +21,7 @@ window.onscroll = () => {
         if(top >= offset && top < offset + height) {
             navLinks.forEach(links => {
                 links.classList.remove('active');
-                document.querySelectorAll('header nav a[href*=' + id + ']').classList.add('active');
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
             });
 
         };
@@ -57,16 +57,19 @@ var swiper = new Swiper(".mySwiper", {
 let darkModeIcon = document.querySelector('#darkMode-icon');
 
 darkModeIcon.onclick = () => {
-    darkModeIcon.classList.toogle('bx-sun');
-    document.body.classList.toogle('dark-mode');
-}
+    darkModeIcon.classList.toggle('bx-sun');
+    document.body.classList.toggle('dark-mode');
+};
 
 // scroll reveal
 ScrollReveal({ 
-    reset: true,
+    // reset: true,
     distance: '80px',
     duration: 2000,
     delay: 200
 });
 
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+ScrollReveal().reveal('.home-img img, .services-container, .portfolio-box, .testimonial-wrapper, .contact form', { origin: 'bottom'});
+ScrollReveal().reveal('.home-content h1, .about-img img', { origin: 'left'});
+ScrollReveal().reveal('.home-content h3, .home-content p, .about-content', { origin: 'right'});

@@ -44,14 +44,14 @@ var swiper = new Swiper(".mySwiper", {
     loop: true,
     grabCursor: true,
     pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+      el: ".swiper-pagination",
+      clickable: true,
     },
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
-});
+  });
 
 // dark ligth mode
 let darkModeIcon = document.querySelector('#darkMode-icon');

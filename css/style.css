@@ -487,7 +487,7 @@ span{
     height: 14rem;
     object-fit: cover;
     border-radius: 50%;
-    border: .5rem solid var(--bg-color);
+    border: .5rem solid var(--bg-color); 
     outline: .5rem solid var(--main-color);
 }
 

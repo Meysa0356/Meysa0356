@@ -203,7 +203,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: professionRotate 13s ease-out infini         te;
+    animation: professionRotate 13s ease-out infinite;
 }
 
 @keyframes professionRotate{

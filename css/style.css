@@ -206,7 +206,7 @@ section{
     animation: professionRotate 13s ease-out infinite;
 }
 
-@keyframes professionRotate{
+@keyframes professionRotate{ 
     0%,20%{
         transform: rotate(0deg);
     }

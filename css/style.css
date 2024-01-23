@@ -203,14 +203,14 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: professionRotate 13s ease-out infinite;
+    animation: professionRotate 2s ease-out infinite;
 }
 
 @keyframes professionRotate{
-    /* 0%,20%{
+    0%,20%{
         transform: rotate(0deg);
     }
-    25%,45%{
+    /* 25%,45%{
         transform: rotate(-90deg);
     }
     50%,70%{
@@ -218,11 +218,11 @@ section{
     }
     75%,95%{
         transform: rotate(-270deg);
-    } */
+    }
     100%{
         transform: rotate(-360deg);
-    }
-}
+    }*/
+} 
 
 .home .profession-box .profession{
     position: absolute;

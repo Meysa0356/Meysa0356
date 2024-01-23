@@ -599,6 +599,10 @@ span{
     color: #333;
 }
 
+.footer span{
+    color: var(--text-color);
+}
+
 /* BREAKPOINTS */
 @media (max-width: 1200px) {
     html{

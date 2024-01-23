@@ -55,7 +55,7 @@ var swiper = new Swiper(".mySwiper", {
 
 // copyright
 var currentYear = new Date().getFullYear();
-document.getElementById("copyrightYear").innerHTML = currentYear;
+document.getElementById("currentYear").innerHTML = currentYear;
 
 // dark ligth mode
 let darkModeIcon = document.querySelector('#darkMode-icon');

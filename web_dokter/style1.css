@@ -1,0 +1,48 @@
+.about {
+  background-image: url("sportylife_435e6d0.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 11%;
+  padding-bottom: 11%;
+  color: #000066;
+}
+
+#profile {
+  background-color: #87d3fe;
+}
+
+#services {
+  background-color: white;
+}
+
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+#contact {
+  background-image: url("pendaftaran.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.kotak {
+  box-sizing: border-box;
+  width: 400px;
+  padding: 5px;
+  font-size: 11pt;
+}
+
+.tombol_kirim {
+  background-color: rgb(10, 10, 10);
+  color: rgb(253, 250, 250);
+  width: 80px;
+  border: none;
+  font-size: 11pt;
+  border-radius: 3px;
+  padding: 10px 20px;
+  cursor: pointer;
+}

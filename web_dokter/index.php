@@ -1,0 +1,234 @@
+<?php
+
+$conn = mysqli_connect("localhost", "root", "", "db_pasien");
+
+if(isset($_POST["Kirim"])){
+    $nama_pasien = $_POST["nama_pasien"];
+    $jenis_kelamin = $_POST["jenis_kelamin"];
+    $tanggal_lahir = $_POST["tanggal_lahir"];
+    $no_telp = $_POST["no_telp"];
+    $alamat = $_POST["alamat"];
+    $pesan = $_POST["pesan"];
+
+    $query = "INSERT INTO passien VALUES ('', '$nama_pasien', '$jenis_kelamin', '$tanggal_lahir', '$no_telp', '$alamat', '$pesan')";
+    mysqli_query($conn, $query);
+    echo "<script> alert('Data Pasien Berhasil Ditambahkan'); 
+    document.location.href = 'admin.php';
+    </script>";
+}?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+
+    <!-- css -->
+    <link rel="stylesheet" href="style1.css" />
+    <title>web dokter</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav
+      style="background-color: #87d3fe"
+      class="navbar navbar-expand-lg navbar-light fixed-top"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#"
+          ><div style="color: #000066"><b>Health Consultasion</b></div></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-right" id="navbarText">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#profile">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- about -->
+    <div class="container-fluid about">
+      <div class="container text-center">
+        <h1>
+          <div style="color: black"><b>Welcome To</b></div>
+        </h1>
+        <h1 class="display-1">Health Consultasion</h1>
+        <br /><br /><br /><br /><br />
+        <h6>
+          <div style="color: black">
+            <h5><b>Layanan  berkonsultasi kesehatan dan gejala penyakit dengan Dr. Jessica Febri Chrisanti.</b></h5>
+          </div>
+        </h6>
+        <h6>
+          <div style="color: black">
+            <h5><b><i>"Sehat pikiran berawal dari sehat jasmani, ayo berkonsultasi sekarang!"</i></b></h5>
+          </div>
+        </h6>
+      </div>
+    </div>
+
+    <section id="profile">
+      <div class="jumbotron text-center">
+        <img
+          src="drjess.webp"
+          alt=""
+          width="200"
+          class="rounded-circle img-thumbnail"
+        />
+        <h1 class="display-3">
+          <div style="color: #000066">Dr. Jessica Febri Chrisanti</div>
+        </h1>
+        <p class="lead">NO STR : 3421100118187094</p>
+        <br /><br /><br />
+        <h6>
+          <b
+            >Dr. Jessica Febri Chrisanti adalah seorang dokter umum yang
+            berpraktik di RS Bethesda Lempuyangwangi, Yogyakarta.</b
+          >
+        </h6>
+        <h6>
+          <b
+            >Dokter Jessica Febri mendapatkan gelar sebagai dokter setelah
+            menyelesaikan studi kedokteran di Universitas</b
+          >
+        </h6>
+        <h6>
+          <b>
+            Gadjah Mada pada tahun 2017. Beliau memiliki pengalaman selama 5
+            tahun di bidang kedokteran umum.</b
+          >
+        </h6>
+      </div>
+    </section>
+
+    <section id="services">  
+      <div class="container-fluid">
+        <div class="container text-center">
+          <h2 style="color:black;"><b>Services</b></h2><br><br><br>
+            <div class="row pt-5">
+              <div class="col-md-3">
+                <i class="fa-solid fa-stethoscope fa-5x" style="color: #000066;"></i><br> 
+                <h4 class="mt-3">Check Up</h4>
+                <p>Layanan pemeriksaan gejala penyakit dan pemeriksaan kesehatan tubuh.</p>
+              </div>
+              <div class="col-md-3">
+                <i class="fa-solid fa-truck-medical fa-5x" style="color: #000066;"></i><br>
+                <h4 class="mt-3">Emergency Care</h4>
+                <p>Layanan gawat darurat pasien 1x24 jam. Hubungi call center 112.</p>
+              </div>
+              <div class="col-md-3">
+                <i class="fa-solid fa-person-circle-plus fa-5x" style="color: #000066;"></i></span><br>
+                <h4 class="mt-3">Rehabilitation</h4>
+                <p>Layanan pemulihan kemampuan fungsional tubuh secara bertahap.</p>
+              </div>
+              <div class="col-md-3">
+                <i class="fa-solid fa-book-medical fa-5x" style="color: #000066;"></i></span><br>
+                <h4 class="mt-3">Education</h4>
+                <p>Layanan pembelajaran ilmu kesehatan secara gratis.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br><br><br><br>
+
+    <section id="contact">
+      <div class="container fluid">
+        <div class="container"> 
+          <form action="" method="POST" name="input"> 
+            <center><br><br><br>
+            <table>
+             <tr> 
+                <td><b>Nama Lengkap</b></td> 
+                <td><b>:</b></td> 
+                <td> <input type="text" name="nama_pasien" class="kotak"> </td> 
+            </tr> 
+            <tr> 
+              <td><b>Jenis Kelamin</b></td> 
+              <td><b>:</b></td> 
+              <td> 
+                  <select name="jenis_kelamin" class="kotak"> 
+                  <option value="Laki-laki">Laki-laki</option>
+                  <option value="Perempuan">Perempuan</option> 
+                  </select>
+               </td> 
+          </tr>
+            <tr> 
+                <td><b>Tanggal Lahir</b></td> 
+                <td><b>:</b></td> 
+                <td> <input type="date" name="tanggal_lahir" class="kotak"> </td> 
+            </tr> 
+            <tr> 
+              <td><b>No. Telp</b></td> 
+              <td><b>:</b></td> 
+              <td> <input type="text" name="no_telp" class="kotak"> </td> 
+          </tr> 
+          <tr> 
+            <td><b>Alamat</b></td> 
+            <td><b>:</b></td> 
+            <td> <input type="text" name="alamat" class="kotak"> </td> 
+        </tr> 
+            <tr>
+                <td><b>Pesan</b></td>
+                <td><b>:</b></td>
+                <td><textarea name="pesan" cols="65" rows="8" placeholder="(Keluhan, Konsultasi)"></textarea></td>
+            </tr>
+            </table>
+            </center>
+            
+            <div style="text-indent: 357px;"><input type="submit" name="Kirim" value="Kirim" class="tombol_kirim"></div>
+        </form>   
+          </div>
+        </div>
+    </section>
+
+    <footer style="background-color: #87d3fe;" class="text-white text-center pb-3">
+      <br><div class="navbar-brand">--- 2023 © by Health Consultasion ---</div>
+    </footer>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
+

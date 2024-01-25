@@ -8,6 +8,16 @@
   color: #000066;
 }
 
+.btn{
+  background-color:#000066;
+  width: 80px;
+  border: none;
+  font-size: 11pt;
+  border-radius: 5px;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+
 #profile {
   background-color: #87d3fe;
 }

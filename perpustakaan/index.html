@@ -1,30 +1,3 @@
-<?php
-
-$conn = mysqli_connect ("localhost", "root", "", "perpustakaan");
-
-if(isset($_POST["Login"])) {
-    $username = $_POST["username"];
-    $password = $_POST["password"];
-    if($username == "admin" && $password == "administrator"){
-        echo "<script> alert('Login Berhasil!'); 
-        document.location='menu.html';
-        </script>";
-    } else {
-        echo "<script> alert('Login Gagal!'); 
-        document.location='index.php';
-        </script>";
-    }
-
-    $query = "INSERT INTO masuk VALUES ('$username', '$password')";
-    mysqli_query($conn, $query);
-}
-?>
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,11 +36,15 @@ if(isset($_POST["Login"])) {
         padding: 7px;
         cursor: pointer;
     }
+    .link {
+        text-decoration:none;
+        color: black;
+    } 
     
 </style>
 <body>
     <div class="box">
-    <form action="" method="post">
+    <form>
         <center><img src="stm.png" alt="" style="float:left;width:55px;height:55px;"><h3><b style="color: white;">Perpustakaan SMK Negeri 1 Majalengka</b></h3></center>
         <hr><br>
         <center>
@@ -75,17 +52,17 @@ if(isset($_POST["Login"])) {
         <tr>
             <td style="color: white;">Username</td>
             <td></td>
-            <td><input type="text" name="username" class="kotak"></td>
+            <td><input type="text" class="kotak"></td>
         </tr>
         <tr>
             <td style="color: white;">Password</td>
             <td></td>
-            <td><input type="password" name="password" class="kotak"></td>
+            <td><input type="password" class="kotak"></td>
         </tr>
         <tr>
             <td></td>
             <td></td>
-            <td><button type="submit" name="Login" class="btn">Login</button> <button type="reset" name="Hapus" class="btn">Hapus</button></td>
+            <td><button type="submit" class="btn"><a href="menu.html" class="link">Login</a></button> <button type="reset" class="btn">Hapus</button></td>
         </tr> 
         </table>
         </center>

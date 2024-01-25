@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: rgb(150, 211, 110);
+    }
+
+    .box {
+        width: 350px;
+        background: rgb(5, 126, 5);
+        margin: 20px auto;
+        padding: 30px 30px;
+        border-radius: 10px;
+    }
+
+    .kotak {
+        box-sizing: border-box;
+        border-radius: 3px;
+        width: 200px;
+        padding: 5px;
+        font-size: 11pt;
+    }
+
+    .link {
+        text-decoration:none;
+        color: black;
+    } 
+
+    .btn{
+        background-color:beige;
+        width: 80px;
+        border: none;
+        font-size: 11pt;
+        border-radius: 5px;
+        padding: 10px 10px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="box">
+        <form>
+        <h3><b>Masukkan Data Pengarang</b></h3><hr>
+        <center>
+            <table>
+                <tr>
+                    <td>Kode Pengarang</td>
+                    <td><input type="text" class="kotak"></td>
+                </tr>
+                <tr>
+                    <td>Nama</td>
+                    <td><input type="text" class="kotak"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" class="kotak"></td>
+                </tr>
+            </table>
+        </center>
+        <hr>
+        <table>
+            <tr>                
+                <td>
+                    <button type="submit" class="btn">Tambah</button> 
+                    <button type="reset" class="btn">Hapus</button> 
+                    <button type="submit" class="btn"><a href="menu.html" class="link">Kembali</a></button>
+                </td>
+            </tr>
+        </table>
+        </form>
+    </div>
+</body>
+</html>
